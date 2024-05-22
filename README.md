@@ -2,14 +2,7 @@
 
 **AniPortrait: Audio-Driven Synthesis of Photorealistic Portrait Animations**
 
-Author: Huawei Wei, Zejun Yang, Zhisheng Wang
 
-Organization: Tencent Games Zhiji, Tencent
-
-![zhiji_logo](asset/zhiji_logo.png)
-
-Here we propose AniPortrait, a novel framework for generating high-quality animation driven by 
-audio and a reference portrait image. You can also provide a video to achieve face reenacment.
 
 <a href='https://arxiv.org/abs/2403.17694'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 <a href='https://huggingface.co/ZJYang/AniPortrait/tree/main'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange'></a>
@@ -19,21 +12,7 @@ audio and a reference portrait image. You can also provide a video to achieve fa
 
 ![pipeline](asset/pipeline.png)
 
-## Updates / TODO List
 
-- ✅ [2024/03/27] Now our paper is available on arXiv.
-
-- ✅ [2024/03/27] Update the code to generate pose_temp.npy for head pose control.
-
-- ✅ [2024/04/02] Update a new pose retarget strategy for vid2vid. Now we support substantial pose difference between ref_image and source video.
-
-- ✅ [2024/04/03] We release our Gradio [demo](https://huggingface.co/spaces/ZJYang/AniPortrait_official) on HuggingFace Spaces (thanks to the HF team for their free GPU support)!
-
-- ✅ [2024/04/07] Update a frame interpolation module to accelerate the inference process. Now you can add -acc in inference commands to get a faster video generation.
-
-- ✅ [2024/04/21] We have released the audio2pose model and [pre-trained weight](https://huggingface.co/ZJYang/AniPortrait/tree/main) for audio2video. Please update the code and download the weight file to experience.
-
-## Various Generated Videos
 
 ### Self driven
 
@@ -243,19 +222,3 @@ Run command:
 accelerate launch train_stage_2.py --config ./configs/train/stage2.yaml
 ```
 
-## Acknowledgements
-
-We first thank the authors of [EMO](https://github.com/HumanAIGC/EMO), and part of the images and audios in our demos are from EMO. Additionally, we would like to thank the contributors to the [Moore-AnimateAnyone](https://github.com/MooreThreads/Moore-AnimateAnyone), [majic-animate](https://github.com/magic-research/magic-animate), [animatediff](https://github.com/guoyww/AnimateDiff) and [Open-AnimateAnyone](https://github.com/guoqincode/Open-AnimateAnyone) repositories, for their open research and exploration.
-
-## Citation
-
-```
-@misc{wei2024aniportrait,
-      title={AniPortrait: Audio-Driven Synthesis of Photorealistic Portrait Animations}, 
-      author={Huawei Wei and Zejun Yang and Zhisheng Wang},
-      year={2024},
-      eprint={2403.17694},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
